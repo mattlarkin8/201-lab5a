@@ -56,17 +56,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let aSum = sum(a,b);
+  let aSum = sum(a,b)[0];
   //console.log(aSum);
-  let fullSum = sum(aSum[0],c);
+  let fullSum = sum(aSum,c)[0];
   //console.log(fullSum);
-  let aProduct = multiply(a,b);
+  let aProduct = multiply(a,b)[0];
   //console.log(aProduct);
-  let fullProduct = multiply(aProduct[0],c);
+  let fullProduct = multiply(aProduct,c)[0];
   //console.log(fullProduct);
-  let sumString = `${a} and ${b} and ${c} sum to ${fullSum[0]}.`;
-  let productString = `The product of ${a} and ${b} and ${c} is ${fullProduct[0]}.`;
-  let answerSumAndMultiply = [fullSum[0],fullProduct[0],sumString,productString];
+  let sumString = `${a} and ${b} and ${c} sum to ${fullSum}.`;
+  let productString = `The product of ${a} and ${b} and ${c} is ${fullProduct}.`;
+  let answerSumAndMultiply = [fullSum,fullProduct,sumString,productString];
 
   return answerSumAndMultiply;
 }
@@ -90,12 +90,19 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+  let aSum = sum(testArray[0],testArray[1])[0];
+  //console.log(aSum);
+  let fullSum = sum(aSum,testArray[2])[0];
+  //console.log(fullSum);
+  let sumArrayString = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${fullSum} is their sum.`;
+  let answerSumArray = [fullSum,sumArrayString];
 
+  return answerSumArray;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+//testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
