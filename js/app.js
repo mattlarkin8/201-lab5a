@@ -90,11 +90,11 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-  let aSum = sum(testArray[0],testArray[1])[0];
+  let aSum = sum(sumArr[0],sumArr[1])[0];
   //console.log(aSum);
-  let fullSum = sum(aSum,testArray[2])[0];
+  let fullSum = sum(aSum,sumArr[2])[0];
   //console.log(fullSum);
-  let sumArrayString = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${fullSum} is their sum.`;
+  let sumArrayString = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${fullSum} is their sum.`;
   let answerSumArray = [fullSum,sumArrayString];
 
   return answerSumArray;
@@ -118,11 +118,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-  let aProduct = multiply(testArray[0],testArray[1])[0];
+  let aProduct = multiply(multArr[0],multArr[1])[0];
   //console.log(aProduct);
-  let fullProduct = multiply(aProduct,testArray[2])[0];
+  let fullProduct = multiply(aProduct,multArr[2])[0];
   //console.log(fullProduct);
-  let multiplyArrayString = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of 24.`;
+  let multiplyArrayString = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${fullProduct}.`;
   let answerMultiplyArray = [fullProduct,multiplyArrayString];
 
   return answerMultiplyArray;
@@ -154,13 +154,13 @@ let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   let iProduct = 1;
-  for(let i = 0; i < testDynamicArray.length; i++){
+  for(let i = 0; i < dynamicArray.length; i++){
     // console.log(i);
     // console.log(`Before:${iProduct}`);
-    iProduct = multiply(iProduct,testDynamicArray[i])[0];
+    iProduct = multiply(iProduct,dynamicArray[i])[0];
     //console.log(`After: ${iProduct}`);
   }
-  let multiplyAnyArrayString = `The numbers ${testDynamicArray} have a product of ${iProduct}.`;
+  let multiplyAnyArrayString = `The numbers ${dynamicArray} have a product of ${iProduct}.`;
   let answerMultiplyAnyArray = [iProduct, multiplyAnyArrayString];
   //console.log(multiplyAnyArrayString);
 
